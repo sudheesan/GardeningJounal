@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gardenLog">
+
+    <fragment
+        android:id="@+id/gardenLog"
+        android:name="com.miu.gardeningjounal.GardenLog"
+        android:label="fragment_garden_log"
+        tools:layout="@layout/fragment_garden_log" >
+        <action
+            android:id="@+id/action_gardenLog_to_plantDetails"
+            app:destination="@id/plantDetails"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_gardenLog_to_add_new_plant"
+            app:destination="@id/add_new_plant" />
+    </fragment>
+    <fragment
+        android:id="@+id/plantDetails"
+        android:name="com.miu.gardeningjounal.PlantDetails"
+        android:label="fragment_plant_details"
+        tools:layout="@layout/fragment_plant_details" >
+        <action
+            android:id="@+id/action_plantDetails_to_gardenLog"
+            app:destination="@id/gardenLog"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/add_new_plant"
+        android:name="com.miu.gardeningjounal.AddNewPlant"
+        android:label="fragment_add_new_plant"
+        tools:layout="@layout/fragment_add_new_plant" >
+        <action
+            android:id="@+id/action_add_new_plant_to_gardenLog"
+            app:destination="@id/gardenLog" />
+    </fragment>
+</navigation>
