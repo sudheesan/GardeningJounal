@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -31,10 +32,10 @@ class GardenLog : BaseFragment() {
 
         viewModel = ViewModelProvider(this).get(PlantsViewModel::class.java)
 
-        viewModel.allPlants.observeForever {
+        viewModel.allPlants.observe(viewLifecycleOwner, Observer {
             binding.rvPlants.adapter = PlantCardViewAdapter(ArrayList(it))
             binding.rvPlants.layoutManager = LinearLayoutManager(requireContext())
-        }
+        })
 
         binding.addPlant.setOnClickListener {
             var direction = GardenLogDirections.actionGardenLogToAddNewPlant()

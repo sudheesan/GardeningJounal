@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -29,14 +30,14 @@ class PlantDetails : BaseFragment() {
         viewModel = ViewModelProvider(this).get(PlantsViewModel::class.java)
 
         val id = nargs.id;
-        viewModel.getById(id).observeForever {
+        viewModel.getById(id).observe(viewLifecycleOwner, Observer {
             if(it !== null){
-                    binding.plantDetailsNameText.text = it.name
-                    binding.plantDetailsPlantType.text = it.type
-                    binding.plantDetailsWateringFrequency.text = it.wateringFrequency
-                    binding.plantDetailsPlantedDate.text = it.plantedDate
+                binding.plantDetailsNameText.text = it.name
+                binding.plantDetailsPlantType.text = it.type
+                binding.plantDetailsWateringFrequency.text = it.wateringFrequency
+                binding.plantDetailsPlantedDate.text = it.plantedDate
             }
-        }
+        })
 
         launch {
             context?.let {
