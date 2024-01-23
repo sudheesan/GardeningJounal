@@ -28,11 +28,12 @@ The Gardening Journal App is a mobile application designed to help users keep tr
    ```bash
    git clone https://github.com/your-username/gardening-journal-app.git
    
-2.Open the project in Android Studio.
-  Building the App
-  Build the project using the "Build" menu or by pressing Ctrl + F9 (Windows/Linux) or Cmd + F9 (Mac).
+2. Open the project in Android Studio.
+
+3. Building the App
+   Build the project using the "Build" menu or by pressing Ctrl + F9 (Windows/Linux) or Cmd + F9 (Mac).
  
-3.Running the App
-  Connect an Android device to your computer or use an emulator.
-  Run the app using the "Run" menu or by pressing Shift + F10 (Windows/Linux) or Cmd + R (Mac).
-  The app will be installed on the connected device or emulator, and you can explore the gardening journal features.
+4. Running the App
+   1. Connect an Android device to your computer or use an emulator.
+   2. Run the app using the "Run" menu or by pressing Shift + F10 (Windows/Linux) or Cmd + R (Mac).
+   3. The app will be installed on the connected device or emulator, and you can explore the gardening journal features.
