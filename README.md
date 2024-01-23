@@ -31,7 +31,7 @@ The Gardening Journal App is a mobile application designed to help users keep tr
 2. Open the project in Android Studio.
 
 3. Building the App
-   Build the project using the "Build" menu or by pressing Ctrl + F9 (Windows/Linux) or Cmd + F9 (Mac).
+   1. Build the project using the "Build" menu or by pressing Ctrl + F9 (Windows/Linux) or Cmd + F9 (Mac).
  
 4. Running the App
    1. Connect an Android device to your computer or use an emulator.
